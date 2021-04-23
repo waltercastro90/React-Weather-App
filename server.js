@@ -3,7 +3,7 @@ var express = require('express');
 //Create our App
 var app = express();
 //set enviornment variable, if there isn't one (aka locally) use 3000
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8080;
 //reroute all https traffic to http using express midleware
 app.use(function (req, res, next) {
   if (req.headers['x-forwarded-proto'] === 'https') {
